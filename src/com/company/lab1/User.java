@@ -6,11 +6,18 @@ import java.util.List;
 public class User extends Person {
     private List<User> friends;
     private List<Post> posts;
+    private List<Message> messages;
 
-    public User(String firstName, String lastName, String email, String phone, List<User> friends, List<Post> posts) {
+    public User(String firstName, String lastName, String email, String phone, List<User> friends, List<Post> posts, List<Message> messages) {
         super(firstName, lastName, email, phone);
         this.friends = friends;
         this.posts = posts;
+        this.messages = messages;
+    }
+
+    public void sendMessage(User user, String message) {
+        Message mes = new Message(message, this, user);
+        messages.add(mes);
     }
 
     public void addPost(String text) {
