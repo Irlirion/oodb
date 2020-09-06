@@ -25,8 +25,16 @@ public class User extends Person {
         posts.add(post);
     }
 
+    public void removePost(Post post) {
+        posts.remove(post);
+    }
+
     public void addFriend(User user) {
         friends.add(user);
+    }
+
+    public void removeFriend(User friend) {
+        friends.remove(friend);
     }
 
     public List<User> getFriends() {
