@@ -5,17 +5,17 @@ import java.util.List;
 public class SocialNetwork {
     private String name;
     private List<User> users;
-    private List<Communitie> communities;
+    private List<Community> communities;
 
     public SocialNetwork(String name) {
         this.name = name;
     }
 
-    public List<Communitie> getCommunities() {
+    public List<Community> getCommunities() {
         return communities;
     }
 
-    public void setCommunities(List<Communitie> communities) {
+    public void setCommunities(List<Community> communities) {
         this.communities = communities;
     }
 

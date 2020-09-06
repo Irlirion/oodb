@@ -3,14 +3,14 @@ package com.company.lab1;
 import java.util.Date;
 import java.util.List;
 
-public class Communitie {
+public class Community {
     private String name;
     private String description;
     private List<Post> posts;
     private List<User> users;
     private List<User> admins;
 
-    public Communitie(String name, String description, List<Post> posts, List<User> users, List<User> admins) {
+    public Community(String name, String description, List<Post> posts, List<User> users, List<User> admins) {
         this.name = name;
         this.description = description;
         this.posts = posts;
