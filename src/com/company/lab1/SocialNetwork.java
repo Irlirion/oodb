@@ -4,7 +4,7 @@ import java.util.List;
 
 public class SocialNetwork {
     private String name;
-    private List<Person> users;
+    private List<User> users;
     private List<Message> messages;
     private List<Communitie> communities;
 
@@ -28,11 +28,11 @@ public class SocialNetwork {
         this.name = name;
     }
 
-    public List<Person> getUsers() {
+    public List<User> getUsers() {
         return users;
     }
 
-    public void setUsers(List<Person> users) {
+    public void setUsers(List<User> users) {
         this.users = users;
     }
 
