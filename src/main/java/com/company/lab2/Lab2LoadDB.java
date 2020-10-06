@@ -15,7 +15,7 @@ public class Lab2LoadDB {
     public static SocialNetwork load() throws IOException {
         SocialNetwork socialNetwork;
         String bankStr = "";
-        File file = new File("bank.json");
+        File file = new File("social_network.json");
 
         if (file.exists()) {
             bankStr = new String(Files.readAllBytes(file.toPath()));

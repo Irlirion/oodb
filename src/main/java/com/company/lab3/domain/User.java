@@ -1,4 +1,4 @@
-package com.company.lab2.domain;
+package com.company.lab3.domain;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
