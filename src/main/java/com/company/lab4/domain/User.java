@@ -1,14 +1,13 @@
-package com.company.lab2.domain;
+package com.company.lab4.domain;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class User extends Person {
-    private List<User> friends;
-    private List<Post> posts;
-    private List<Message> messages;
+    private List<User> friends = new ArrayList<>();
+    private List<Post> posts = new ArrayList<>();
+    private List<Message> messages = new ArrayList<>();
 
     public User() {
         super();
@@ -23,8 +22,6 @@ public class User extends Person {
         messages.add(mes);
     }
 
-    @XmlElementWrapper(name = "messages")
-    @XmlElement(name = "message")
     public List<Message> getMessages() {
         return messages;
     }
@@ -50,8 +47,6 @@ public class User extends Person {
         friends.remove(friend);
     }
 
-    @XmlElementWrapper(name = "friends")
-    @XmlElement(name = "friend")
     public List<User> getFriends() {
         return friends;
     }
@@ -60,8 +55,6 @@ public class User extends Person {
         this.friends = friends;
     }
 
-    @XmlElementWrapper(name = "posts")
-    @XmlElement(name = "post")
     public List<Post> getPosts() {
         return posts;
     }

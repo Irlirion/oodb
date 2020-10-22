@@ -1,4 +1,4 @@
-package com.company.lab2.domain;
+package com.company.lab4.domain;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -19,9 +19,13 @@ public class SocialNetwork {
         this.name = name;
     }
 
-    public void addUser(User user) {users.add(user);}
+    public void addUser(User user) {
+        users.add(user);
+    }
 
-    public void addCommunity(Community community) {communities.add(community);}
+    public void addCommunity(Community community) {
+        communities.add(community);
+    }
 
     @XmlElementWrapper(name = "communities")
     @XmlElement(name = "communitie")
