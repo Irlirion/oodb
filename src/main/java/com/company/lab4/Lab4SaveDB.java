@@ -13,7 +13,7 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.List;
 
-public class Lab2SaveDB {
+public class Lab4SaveDB {
     public static void saveSocianNetwork(SocialNetwork socialNetwork, Connection connect) throws IOException, SQLException {
 
         if (socialNetwork != null) {
@@ -50,7 +50,6 @@ public class Lab2SaveDB {
                 statement.setString(1, userAsJson);
                 statement.addBatch();
             }
-
             // The returned int array store insert sql affected record counts.
             Instant start = Instant.now();
             int[] successCount = statement.executeBatch();

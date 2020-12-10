@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class Lab2Main {
+public class Lab4Main {
     private static final String[] firstnames = new String[]{"Ilya", "Nikita", "Dima", "Vova", "Anton", "Zhenya", "Sasha", "Kosty"};
     private static final String[] lastnames = new String[]{"Vasilyev", "Gun", "Bum", "Lon", "Non", "Pam", "Can", "Put", "Get", "Van"};
 
@@ -41,20 +41,20 @@ public class Lab2Main {
 
             clearTable(connect);
             System.out.println("Save users to table:");
-            Lab2SaveDB.saveUsersList(users, connect, "json");
-            Lab2SaveDB.saveUsersList(users, connect, "jsonb");
+            Lab4SaveDB.saveUsersList(users, connect, "json");
+            Lab4SaveDB.saveUsersList(users, connect, "jsonb");
 
             System.out.println("Load users from table:");
-            Lab2LoadDB.loadUsersList(connect, "json", "");
-            Lab2LoadDB.loadUsersList(connect, "jsonb", "");
+            Lab4LoadDB.loadUsersList(connect, "json", "");
+            Lab4LoadDB.loadUsersList(connect, "jsonb", "");
 
             System.out.println("Load sorted users:");
-            Lab2LoadDB.loadUsersListSorted(connect, "json", "firstName");
-            Lab2LoadDB.loadUsersListSorted(connect, "jsonb", "firstName");
+            Lab4LoadDB.loadUsersListSorted(connect, "json", "firstName");
+            Lab4LoadDB.loadUsersListSorted(connect, "jsonb", "firstName");
 
             System.out.println("Find users by firstName:");
-            Lab2LoadDB.loadUsersList(connect, "json", "where (json->>'firstName') = 'Anton'");
-            Lab2LoadDB.loadUsersList(connect, "jsonb", "where (jsonb->>'firstName') = 'Anton'");
+            Lab4LoadDB.loadUsersList(connect, "json", "where (json->>'firstName') = 'Anton'");
+            Lab4LoadDB.loadUsersList(connect, "jsonb", "where (jsonb->>'firstName') = 'Anton'");
 
             connect.close();
         } catch (SQLException e) {

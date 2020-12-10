@@ -15,7 +15,7 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lab2LoadDB {
+public class Lab4LoadDB {
 
     public static SocialNetwork load(Connection connect) throws IOException, SQLException {
         SocialNetwork socialNetwork;
