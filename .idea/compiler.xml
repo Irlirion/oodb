@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="oodb" target="14" />
+      <module name="oodb" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
