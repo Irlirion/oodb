@@ -75,23 +75,6 @@ public class Lab5Main {
         return result;
     }
 
-    private static String getMovie(Connection connection, int movieID) {
-        StringBuilder result = new StringBuilder();
-        try {
-            PreparedStatement statement = connection.prepareStatement(
-                    "SELECT name, actors, artists from movie where id=?");
-            statement.setInt(1, movieID);
-            ResultSet resultSet = statement.executeQuery();
-            while (resultSet.next()) {
-                result.append("\t").append(resultSet.getString(1)).append(", \n\t\tВ фильме снимались: ").append(resultSet.getString(2)).append("\n\t\tТруппа:").append(resultSet.getString(3));
-            }
-
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
-        }
-        return result.toString();
-    }
-
     public static void addData(Connection connection) {
         addUsers(connection);
         addFriends(connection);
