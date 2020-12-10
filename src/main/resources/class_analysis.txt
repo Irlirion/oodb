@@ -1,0 +1,402 @@
+--------------
+General info
+	Class: public class com.company.lab6.entities.Community
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class java.lang.Object
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.lang.String name
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.lang.String description
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.util.Set posts
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Post.class, type=ONE_TO_MANY)]
+
+	private java.util.Set users
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=MANY_TO_MANY)]
+
+	private java.util.Set admins
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=MANY_TO_MANY)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.Community() 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.Community(java.lang.String,java.lang.String) 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.Community.getName() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Community.toString() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.setName(java.lang.String) 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.Community.getId() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.addPost(java.lang.String) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.addUser(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.addAdmin(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Community.getDescription() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.setDescription(java.lang.String) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.Community.getPosts() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.setPosts(java.util.Set) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.Community.getUsers() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.setUsers(java.util.Set) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.Community.getAdmins() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Community.setAdmins(java.util.Set) 
+	Annotations of method: [] 
+
+--------------
+General info
+	Class: public class com.company.lab6.entities.Post
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class java.lang.Object
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.util.Date postingDate
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.lang.String text
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.Post() 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.Post(java.util.Date,java.lang.String) 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.Post.toString() 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.Post.getId() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Post.getText() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Post.setText(java.lang.String) 
+	Annotations of method: [] 
+
+	public java.util.Date com.company.lab6.entities.Post.getPostingDate() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Post.setPostingDate(java.util.Date) 
+	Annotations of method: [] 
+
+--------------
+General info
+	Class: public class com.company.lab6.entities.Message
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class java.lang.Object
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.lang.String message
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private com.company.lab6.entities.User sender
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=java.lang.Object.class, type=MANY_TO_ONE)]
+
+	private com.company.lab6.entities.User receiver
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=java.lang.Object.class, type=MANY_TO_ONE)]
+
+	private java.util.Date messageDate
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.Message() 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.Message(java.lang.String,com.company.lab6.entities.User,com.company.lab6.entities.User) 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.Message.toString() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Message.getMessage() 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.Message.getId() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Message.setMessage(java.lang.String) 
+	Annotations of method: [] 
+
+	public com.company.lab6.entities.User com.company.lab6.entities.Message.getSender() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Message.setSender(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public com.company.lab6.entities.User com.company.lab6.entities.Message.getReceiver() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Message.setReceiver(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public java.util.Date com.company.lab6.entities.Message.getMessageDate() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Message.setMessageDate(java.util.Date) 
+	Annotations of method: [] 
+
+--------------
+General info
+	Class: public class com.company.lab6.entities.User
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class com.company.lab6.entities.Person
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.util.Set friends
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=MANY_TO_MANY)]
+
+	private java.util.Set posts
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Post.class, type=ONE_TO_MANY)]
+
+	private java.util.Set messages
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Message.class, type=ONE_TO_MANY)]
+
+	private java.util.Set communities
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Community.class, type=MANY_TO_MANY)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.User() 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.User(java.lang.String,java.lang.String) 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.User.toString() 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.User.getId() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.sendMessage(com.company.lab6.entities.User,java.lang.String) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.User.getCommunities() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.setCommunities(java.util.Set) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.User.getMessages() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.setMessages(java.util.Set) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.removePost(com.company.lab6.entities.Post) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.addFriend(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.removeFriend(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.User.getFriends() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.addPost(java.lang.String) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.User.getPosts() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.setPosts(java.util.Set) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.User.setFriends(java.util.Set) 
+	Annotations of method: [] 
+
+--------------
+General info
+	Class: public class com.company.lab6.entities.SocialNetwork
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class java.lang.Object
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.lang.String name
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.util.Set users
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=ONE_TO_MANY)]
+
+	private java.util.Set communities
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Community.class, type=ONE_TO_MANY)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.SocialNetwork() 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.SocialNetwork(java.lang.String) 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.SocialNetwork.getName() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.SocialNetwork.toString() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.SocialNetwork.setName(java.lang.String) 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.SocialNetwork.getId() 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.SocialNetwork.getCommunities() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.SocialNetwork.setCommunities(java.util.Set) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.SocialNetwork.addUser(com.company.lab6.entities.User) 
+	Annotations of method: [] 
+
+	public java.util.Set com.company.lab6.entities.SocialNetwork.getUsers() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.SocialNetwork.setUsers(java.util.Set) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.SocialNetwork.addCommunity(com.company.lab6.entities.Community) 
+	Annotations of method: [] 
+
+--------------
+General info
+	Class: public class com.company.lab6.entities.Person
+	Annotations: [@com.company.lab6.annotations.Entity(name="")]
+	Superclass: public class java.lang.Object
+	Interfaces: []
+	Additional attributes: 
+		Inner classes: null
+Field of class: 
+
+	private long id
+	Annotations of field: [@com.company.lab6.annotations.Id()]
+
+	private java.lang.String firstName
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.lang.String lastName
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.lang.String email
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+	private java.lang.String phone
+	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
+
+Constructors of class: 
+
+	public com.company.lab6.entities.Person(java.lang.String,java.lang.String) 
+	Annotations of constructor: [] 
+
+	public com.company.lab6.entities.Person() 
+	Annotations of constructor: [] 
+
+Methods of class: 
+
+	public java.lang.String com.company.lab6.entities.Person.toString() 
+	Annotations of method: [] 
+
+	public long com.company.lab6.entities.Person.getId() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Person.getFirstName() 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Person.getLastName() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Person.setFirstName(java.lang.String) 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Person.setLastName(java.lang.String) 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Person.getEmail() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Person.setEmail(java.lang.String) 
+	Annotations of method: [] 
+
+	public java.lang.String com.company.lab6.entities.Person.getPhone() 
+	Annotations of method: [] 
+
+	public void com.company.lab6.entities.Person.setPhone(java.lang.String) 
+	Annotations of method: [] 
+
