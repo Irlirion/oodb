@@ -1,20 +1,10 @@
 package com.company.lab6.entities;
 
-import com.company.lab6.annotations.Column;
-import com.company.lab6.annotations.Entity;
-import com.company.lab6.annotations.Id;
-
-@Entity
 public class Person {
-    @Id
-    private long id;
-    @Column
+
     private String firstName;
-    @Column
     private String lastName;
-    @Column
     private String email;
-    @Column
     private String phone;
 
     public Person(String firstName, String lastName) {
@@ -26,9 +16,6 @@ public class Person {
 
     }
 
-    public long getId() {
-        return id;
-    }
 
     public String getFirstName() {
         return firstName;

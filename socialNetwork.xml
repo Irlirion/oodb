@@ -11,7 +11,7 @@
             <description>This community from programmers to programmers</description>
             <name>programming</name>
             <posts/>
-            <users>
+            <peoples>
                 <user>
                     <firstName>Ilya</firstName>
                     <lastName>Vasilyev</lastName>
@@ -32,11 +32,11 @@
                     <firstName>Anton</firstName>
                     <lastName>Non</lastName>
                 </user>
-            </users>
+            </peoples>
         </communitie>
     </communities>
     <name>vk</name>
-    <users>
+    <peoples>
         <user>
             <firstName>Ilya</firstName>
             <lastName>Vasilyev</lastName>
@@ -57,5 +57,5 @@
             <firstName>Anton</firstName>
             <lastName>Non</lastName>
         </user>
-    </users>
+    </peoples>
 </socialNetwork>

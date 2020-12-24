@@ -20,7 +20,7 @@ Field of class:
 	private java.util.Set posts
 	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.Post.class, type=ONE_TO_MANY)]
 
-	private java.util.Set users
+	private java.util.Set peoples
 	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=MANY_TO_MANY)]
 
 	private java.util.Set admins
@@ -289,7 +289,7 @@ Field of class:
 	private java.lang.String name
 	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111)]
 
-	private java.util.Set users
+	private java.util.Set peoples
 	Annotations of field: [@com.company.lab6.annotations.Column(name="", SQLType=1111), @com.company.lab6.annotations.Relation(target=com.company.lab6.entities.User.class, type=ONE_TO_MANY)]
 
 	private java.util.Set communities

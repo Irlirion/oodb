@@ -1,21 +1,17 @@
-package com.company.lab6.entities;
+package com.company.lab9.domain;
 
-import com.company.lab6.annotations.Column;
-import com.company.lab6.annotations.Entity;
-import com.company.lab6.annotations.Id;
+import javax.persistence.*;
 
 import java.util.Date;
 
 @Entity
-public class Post {
+public class Post{
     @Id
-    private long id;
-    @Column
+    private Long id;
+    @Temporal(TemporalType.TIMESTAMP)
     private Date postingDate;
     @Column
     private String text;
-    @Column
-    private long owner;
 
     public Post() {
     }
@@ -25,8 +21,12 @@ public class Post {
         this.text = text;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Date getPostingDate() {

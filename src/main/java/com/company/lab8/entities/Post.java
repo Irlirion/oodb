@@ -1,4 +1,4 @@
-package com.company.lab6.entities;
+package com.company.lab8.entities;
 
 import com.company.lab6.annotations.Column;
 import com.company.lab6.annotations.Entity;
@@ -7,15 +7,15 @@ import com.company.lab6.annotations.Id;
 import java.util.Date;
 
 @Entity
-public class Post {
+public class Post implements com.company.lab8.Entity<Long> {
     @Id
-    private long id;
+    private Long id;
     @Column
     private Date postingDate;
     @Column
     private String text;
     @Column
-    private long owner;
+    private long community_id;
 
     public Post() {
     }
@@ -25,8 +25,13 @@ public class Post {
         this.text = text;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Date getPostingDate() {
